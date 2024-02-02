@@ -1,0 +1,12 @@
+@import '../../styles';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: $primary-color;
+  .nav-bar {
+    display: flex;
+    gap: 20px;
+  }
+}
