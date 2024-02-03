@@ -4,12 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: $primary-color;
   padding: 10px;
   .logo {
     font-size: 28px;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: $primary-color;
 
     &:hover {
       cursor: pointer;
@@ -26,6 +27,11 @@
     text-decoration: none;
     font-size: 20px;
     position: relative;
+
+    .nav-pages {
+      display: flex;
+      gap: 20px;
+    }
 
     .nav-link {
       text-decoration: none;
@@ -58,6 +64,24 @@
       align-items: center;
       justify-content: center;
       font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    .line-container {
+      display: flex;
+    }
+    .nav-bar {
+      margin-left: auto;
+      .nav-pages {
+        display: none;
+        flex-direction: column;
+      }
+      .circle {
+        right: 27px;
+      }
     }
   }
 }
