@@ -16,3 +16,19 @@ body {
   background-color: $background-color;
   font-family: 'Roboto', sans-serif;
 }
+
+.button {
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 25px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button-primary {
+  background-color: $primary-color;
+  color: $background-color;
+}

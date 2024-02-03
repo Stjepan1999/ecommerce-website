@@ -1,5 +1,10 @@
 import './HomePage.scss';
+import { LandingSection } from '../../components/HomePage/LandingSection';
 
 export const HomePage = () => {
-  return <div>This is home page</div>;
+  return (
+    <div className="home-page">
+      <LandingSection />
+    </div>
+  );
 };

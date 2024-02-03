@@ -1,0 +1,51 @@
+@import '../../styles';
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 4rem;
+
+  .landing-section {
+    display: flex;
+    justify-content: space-between;
+    color: $text-color;
+
+    .landing-heading {
+      font-size: 72px;
+      margin-top: 2rem;
+    }
+
+    .primary-color-text {
+      color: $primary-color;
+    }
+
+    .landing-image {
+      width: 600px;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .landing-description {
+      margin-bottom: 5rem;
+    }
+    .landing-stats {
+      display: flex;
+      gap: 30px;
+      margin-top: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home-page {
+    align-items: center;
+    padding: 0 2rem;
+    .landing-section {
+      flex-direction: column;
+
+      .landing-image {
+        width: 300px;
+      }
+    }
+  }
+}

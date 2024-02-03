@@ -3,8 +3,9 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 10px;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+
   .logo {
     font-size: 28px;
     display: flex;
@@ -70,6 +71,7 @@
 
 @media screen and (max-width: 600px) {
   .header {
+    padding: 1rem 2rem;
     .line-container {
       display: flex;
     }
