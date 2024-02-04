@@ -12,7 +12,8 @@
 
     .landing-heading {
       font-size: 72px;
-      margin-top: 2rem;
+      color: $text-color-secondary;
+      margin: 2rem 0 1rem 0;
     }
 
     .primary-color-text {
@@ -27,11 +28,21 @@
 
     .landing-description {
       margin-bottom: 5rem;
+      font-size: 18px;
     }
     .landing-stats {
       display: flex;
       gap: 30px;
       margin-top: 5rem;
+    }
+
+    .stat-number {
+      font-size: 38px;
+      color: $text-color-secondary;
+    }
+
+    .stat-text {
+      font-size: 20px;
     }
   }
 }
