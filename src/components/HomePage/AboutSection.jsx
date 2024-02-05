@@ -5,8 +5,8 @@ import supportIcon from '../../assets/icons/support.png';
 
 export const AboutSection = () => {
   return (
-    <div className="about-section">
-      <h1 className="section-heading">
+    <div className="section about-section">
+      <h1 className="section-heading text-margin">
         Why Choose <span className="primary-color-text">SmartCart</span>?
       </h1>
       <div className="info-blocks-container">
@@ -34,7 +34,7 @@ const InfoBlock = ({ title, icon, description }) => {
   return (
     <div className="info-block">
       <div className="info-block-heading">
-        <img src={icon} className="info-icon" /> <h3 className="">{title}</h3>
+        <img src={icon} className="medium-icon" /> <h3 className="">{title}</h3>
       </div>
       <div className="text-description">{description}</div>
     </div>

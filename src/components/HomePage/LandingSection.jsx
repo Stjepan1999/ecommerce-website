@@ -7,7 +7,7 @@ import landingImageLarge from '../../assets/images/landing-image-large.jpg';
 
 export const LandingSection = () => {
   return (
-    <div className="landing-section">
+    <div className="section landing-section">
       <div className="landing-text">
         <p className="landing-">Welcome to SmartCart</p>
         <h1 className="landing-heading">
