@@ -21,6 +21,39 @@ body {
   align-items: center;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 4rem;
+  gap: 100px;
+  max-width: 1600px;
+}
+
+.section {
+  margin-bottom: 6rem;
+}
+
+.section-heading {
+  font-size: 40px;
+  color: $text-color-secondary;
+  margin-bottom: 2rem;
+}
+
+.heading-large {
+  font-size: 72px;
+  margin: 0;
+}
+
+.text-description {
+  font-size: 20px;
+  line-height: 1.5;
+  color: $text-color;
+}
+
+.text-margin {
+  margin-bottom: 4rem;
+}
+
 .button {
   padding: 10px 30px;
   font-size: 20px;

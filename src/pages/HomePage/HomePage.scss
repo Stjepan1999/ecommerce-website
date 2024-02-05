@@ -1,13 +1,5 @@
 @import '../../styles';
 
-.home-page {
-  display: flex;
-  flex-direction: column;
-  padding: 6rem 4rem;
-  gap: 100px;
-  max-width: 1600px;
-}
-
 .section {
   margin-bottom: 6rem;
 }
@@ -25,10 +17,6 @@
 
 .text-margin {
   margin-bottom: 4rem;
-}
-
-.medium-icon {
-  width: 40px;
 }
 
 .landing-section {

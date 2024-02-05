@@ -6,7 +6,7 @@ import { Testimonials } from '../../components/HomePage/TestimonialsSection';
 
 export const HomePage = () => {
   return (
-    <div className="home-page">
+    <div className="page">
       <LandingSection />
       <PopularProducts />
       <AboutSection />

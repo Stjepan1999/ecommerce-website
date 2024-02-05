@@ -16,7 +16,7 @@ export const Testimonials = () => {
       <div className="testimonials-block-container">
         <TestimonialBlock
           fullName="Emily Johnson"
-          text="Shopping at SmartCart was a game-changer for me! The diverse range of products, from tech gadgets to stylish fashion finds, impressed me."
+          text="Shopping at SmartCart was a game-changer for me! The diverse range of products impressed me."
           photo={personOnePhoto}
         />
         <TestimonialBlock
@@ -34,7 +34,7 @@ const TestimonialBlock = ({ fullName, text, photo }) => {
     <div className="testimonial-block">
       <img src={photo} className="person-photo" />
       <h3>{fullName}</h3>
-      <p>{text}</p>
+      <p className="text-description">{text}</p>
       <FiveStars />
     </div>
   );
