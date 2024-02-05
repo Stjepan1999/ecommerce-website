@@ -14,7 +14,7 @@ export const LandingSection = () => {
           Discover the Art of <br />
           <span className="primary-color-text">Smart</span> Shopping
         </h1>
-        <p className="landing-description">
+        <p className="text-description text-margin">
           Explore the future of online shopping with SmartCart.
           <br />
           Whether it is fashion, tech, or home essentials, we have it all.
