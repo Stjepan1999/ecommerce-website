@@ -4,6 +4,7 @@ import { HomePage } from './pages/HomePage/HomePage';
 import { ShopPage } from './pages/ShopPage/ShopPage';
 import { AboutPage } from './pages/AboutPage/AboutPage';
 import './styles.scss';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

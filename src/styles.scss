@@ -3,7 +3,7 @@
 
 $background-color: #f5f5f5;
 $primary-color: #3498db;
-$secondary-color: #2ecc71;
+$secondary-color: #1c6da8;
 $text-color: #555555;
 $text-color-secondary: #000000;
 
@@ -46,4 +46,28 @@ body {
 
 .primary-color-text {
   color: $primary-color;
+}
+
+.logo {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $primary-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-secondary {
+  color: $background-color;
+}
+
+.medium-icon {
+  width: 40px;
 }
