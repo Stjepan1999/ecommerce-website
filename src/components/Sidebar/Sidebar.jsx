@@ -31,6 +31,7 @@ export const Sidebar = () => {
         <span></span>
         <span></span>
       </div>
+      <div className={`overlay ${isOpen ? 'active' : ''}`} onClick={toggleSidebar}></div>
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <button className="button-no-style" onClick={toggleSidebar}>
           X

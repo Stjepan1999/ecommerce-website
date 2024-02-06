@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { Sidebar } from '../Sidebar/Sidebar';
+import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
 import logo from '../../assets/icons/logo.png';
-import shoppingBag from '../../assets/icons/shopping-bag.png';
 import './Header.scss';
 
 export const Header = () => {
@@ -23,8 +23,7 @@ export const Header = () => {
             About Us
           </NavLink>
         </div>
-        <img src={shoppingBag} className="bag-icon" />
-        <span className="circle">0</span>
+        <ShoppingCart />
         <Sidebar />
       </div>
     </header>
