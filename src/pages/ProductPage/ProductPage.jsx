@@ -2,6 +2,7 @@ import './ProductPage.scss';
 import '../../styles.scss';
 import '../../components/Product/Product.scss';
 import starIcon from '../../assets/icons/star.png';
+import { Link } from 'react-router-dom';
 
 export const ProductPage = () => {
   return (
@@ -31,7 +32,9 @@ export const ProductPage = () => {
           sapiente! Adipisci, aut corporis nisi ab, a nam sed vel
         </p>
         <div className="flex-container">
-          <button className="button button-secondary">Go Back</button>
+          <Link to="/shop" className="link">
+            <button className="button button-secondary">Go Back</button>
+          </Link>
           <button className="button button-primary">Add to cart</button>
         </div>
       </div>

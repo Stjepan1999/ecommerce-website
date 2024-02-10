@@ -4,6 +4,7 @@ import forwardArrow from '../../assets/images/forward-arrow.png';
 import landingImageSmall from '../../assets/images/landing-image-small.jpg';
 import landingImageMedium from '../../assets/images/landing-image-medium.jpg';
 import landingImageLarge from '../../assets/images/landing-image-large.jpg';
+import { Link } from 'react-router-dom';
 
 export const LandingSection = () => {
   return (
@@ -19,10 +20,13 @@ export const LandingSection = () => {
           <br />
           Whether it is fashion, tech, or home essentials, we have it all.
         </p>
-        <button className="button button-primary">
-          Shop now
-          <img src={forwardArrow} alt="Forward arrow" className="button-icon" />
-        </button>
+        <Link to="/shop" className="link">
+          <button className="button button-primary">
+            Shop now
+            <img src={forwardArrow} alt="Forward arrow" className="button-icon" />
+          </button>
+        </Link>
+
         <div className="landing-stats">
           <StatElement statNumber="1k+" statText="Brands" />
           <StatElement statNumber="500+" statText="Shops" />
