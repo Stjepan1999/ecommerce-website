@@ -5,6 +5,7 @@ import { ShopPage } from './pages/ShopPage/ShopPage';
 import { AboutPage } from './pages/AboutPage/AboutPage';
 import './styles.scss';
 import { Footer } from './components/Footer/Footer';
+import { ProductPage } from './pages/ProductPage/ProductPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/product" element={<ProductPage />} />
       </Routes>
       <Footer />
     </Router>
