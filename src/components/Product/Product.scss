@@ -15,31 +15,31 @@
     cursor: pointer;
     transform: scale(1.1);
   }
+}
 
-  .product-image {
-    width: 250px;
-    height: 250px;
+.product-image {
+  width: 250px;
+  height: 250px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: $text-color;
+
+  .rating-star {
+    width: 25px;
   }
+}
 
-  .product-rating {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: $text-color;
+.product-title {
+  font-size: 20px;
+  text-align: center;
+}
 
-    .rating-star {
-      width: 25px;
-    }
-  }
-
-  .product-title {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .product-price {
-    color: $primary-color;
-    font-size: 20px;
-    font-weight: 600;
-  }
+.product-price {
+  color: $primary-color;
+  font-size: 20px;
+  font-weight: 600;
 }

@@ -26,7 +26,6 @@ body {
   flex-direction: column;
   padding: 6rem 4rem;
   gap: 100px;
-  max-width: 1600px;
 }
 
 .section {
@@ -64,11 +63,17 @@ body {
 
   &:hover {
     cursor: pointer;
+    opacity: 0.9;
   }
 }
 
 .button-primary {
   background-color: $primary-color;
+  color: $background-color;
+}
+
+.button-secondary {
+  background-color: $text-color;
   color: $background-color;
 }
 
@@ -79,6 +84,11 @@ body {
 
 .primary-color-text {
   color: $primary-color;
+}
+
+.secondary-color-text {
+  color: $text-color-secondary;
+  font-weight: 700;
 }
 
 .logo {
