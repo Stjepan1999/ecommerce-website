@@ -13,7 +13,7 @@ export const ShopPage = () => {
     <div className="page">
       <div className="products-container">
         {products.map((product, index) => (
-          <Link to="/product" key={index} className="link">
+          <Link to={`/product/${product.id}`} key={product.id} className="link">
             <Product
               id={product.id}
               category={product.category}

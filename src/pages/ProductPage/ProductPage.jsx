@@ -2,35 +2,35 @@ import './ProductPage.scss';
 import '../../styles.scss';
 import '../../components/Product/Product.scss';
 import starIcon from '../../assets/icons/star.png';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { useContext } from 'react';
+import { ShopContext } from '../../App';
 
 export const ProductPage = () => {
+  const { productId } = useParams();
+  const { products } = useContext(ShopContext);
+  const selectedProduct = products.find((item) => item.id === parseInt(productId));
+
   return (
     <div className="page product-page">
-      <img
-        src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
-        className="product-page-image"
-      />
+      <img src={selectedProduct.image} className="product-page-image" />
       <div className="product-info">
         <div className="flex-container">
           <p>
-            <span className="secondary-color-text">ID:</span> 10
+            <span className="secondary-color-text">ID:</span> {selectedProduct.id}
           </p>
           <p>
-            <span className="secondary-color-text">Category:</span> Clothing
+            <span className="secondary-color-text">Category:</span> {selectedProduct.category}
           </p>
         </div>
-        <h1>Mens Casual Premium Slim Fit T-Shirts</h1>
+        <h1>{selectedProduct.title}</h1>
         <div className="product-rating">
           <img src={starIcon} className="rating-star" />
-          <span className="secondary-color-text">4.7</span> (319)
+          <span className="secondary-color-text">{selectedProduct.rating.rate}</span> ({selectedProduct.rating.count})
         </div>
-        <h2>22.3 €</h2>
+        <h2>{selectedProduct.price} €</h2>
         <hr />
-        <p className="text-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dolore minima! Corporis eum voluptatum amet
-          sapiente! Adipisci, aut corporis nisi ab, a nam sed vel
-        </p>
+        <p className="text-description">{selectedProduct.description}</p>
         <div className="flex-container">
           <Link to="/shop" className="link">
             <button className="button button-secondary">Go Back</button>

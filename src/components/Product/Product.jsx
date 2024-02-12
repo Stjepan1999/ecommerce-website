@@ -10,7 +10,7 @@ export const Product = ({ title, price, rating, image }) => {
         <div>{rating}</div>
       </div>
       <div className="product-title">{title}</div>
-      <p className="product-price">{price}€</p>
+      <p className="product-price">{price} €</p>
     </div>
   );
 };

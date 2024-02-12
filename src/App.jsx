@@ -32,6 +32,10 @@ function App() {
     fetchData();
   }, []);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <ShopContext.Provider value={{ products, cartItems }}>
       <Router>
@@ -40,7 +44,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/product" element={<ProductPage />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
         </Routes>
         <Footer />
       </Router>
