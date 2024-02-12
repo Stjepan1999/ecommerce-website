@@ -42,7 +42,7 @@ const TestimonialBlock = ({ fullName, text, photo }) => {
 
 const FiveStars = () => {
   return (
-    <div>
+    <div className="star-icons-container">
       <img src={starIcon} className="medium-icon" />
       <img src={starIcon} className="medium-icon" />
       <img src={starIcon} className="medium-icon" />

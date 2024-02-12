@@ -120,3 +120,15 @@ body {
   text-decoration: none;
   color: black;
 }
+
+@media (max-width: 1360px) {
+  .page {
+    padding: 2rem 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    margin-bottom: 0;
+  }
+}

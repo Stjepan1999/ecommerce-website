@@ -21,49 +21,51 @@ export const Footer = () => {
             <img src={instagramLogo} className="medium-icon" />
           </div>
         </div>
-        <div className="footer-section">
-          <h3 className="footer-heading">Products</h3>
-          <NavLink to="/" className="nav-link">
-            Air Force 1
-          </NavLink>
-          <NavLink to="/" className="nav-link">
-            Air Force 1
-          </NavLink>
-          <NavLink to="/" className="nav-link">
-            Air Force 1
-          </NavLink>
-          <NavLink to="/" className="nav-link">
-            Air Force 1
-          </NavLink>
-          <NavLink to="/" className="nav-link">
-            Air Force 1
-          </NavLink>
-          <NavLink to="/" className="nav-link">
-            Air Force 1
-          </NavLink>
-        </div>
-        <div className="footer-section">
-          <h3 className="footer-heading">Help</h3>
-          <NavLink to="/" className="nav-link">
-            About us
-          </NavLink>
-          <NavLink to="/" className="nav-link">
-            FAQs
-          </NavLink>
-          <NavLink to="/" className="nav-link">
-            How it works
-          </NavLink>
-          <NavLink to="/" className="nav-link">
-            Privacy policy
-          </NavLink>
-          <NavLink to="/" className="nav-link">
-            Payment policy
-          </NavLink>
-        </div>
-        <div className="footer-section">
-          <h3 className="footer-heading">Contact us</h3>
-          <p>info@smartcart.com</p>
-          <p>+28 3939 0023</p>
+        <div className="footer-container">
+          <div className="footer-section">
+            <h3 className="footer-heading">Products</h3>
+            <NavLink to="/" className="nav-link">
+              Air Force 1
+            </NavLink>
+            <NavLink to="/" className="nav-link">
+              Air Force 1
+            </NavLink>
+            <NavLink to="/" className="nav-link">
+              Air Force 1
+            </NavLink>
+            <NavLink to="/" className="nav-link">
+              Air Force 1
+            </NavLink>
+            <NavLink to="/" className="nav-link">
+              Air Force 1
+            </NavLink>
+            <NavLink to="/" className="nav-link">
+              Air Force 1
+            </NavLink>
+          </div>
+          <div className="footer-section">
+            <h3 className="footer-heading">Help</h3>
+            <NavLink to="/" className="nav-link">
+              About us
+            </NavLink>
+            <NavLink to="/" className="nav-link">
+              FAQs
+            </NavLink>
+            <NavLink to="/" className="nav-link">
+              How it works
+            </NavLink>
+            <NavLink to="/" className="nav-link">
+              Privacy policy
+            </NavLink>
+            <NavLink to="/" className="nav-link">
+              Payment policy
+            </NavLink>
+          </div>
+          <div className="footer-section">
+            <h3 className="footer-heading">Contact us</h3>
+            <p>info@smartcart.com</p>
+            <p>+28 3939 0023</p>
+          </div>
         </div>
       </div>
     </footer>
