@@ -1,10 +1,18 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './ShoppingCart.scss';
 import '../Sidebar/Sidebar.scss';
 import shoppingBag from '../../assets/icons/shopping-bag.png';
+import { ShopContext } from '../../App';
 
 export const ShoppingCart = () => {
+  const { cartItems } = useContext(ShopContext);
   const [isOpen, setIsOpen] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(null);
+
+  useEffect(() => {
+    const totalPrice = cartItems.reduce((acc, curr) => acc + curr.price, 0);
+    setTotalPrice(totalPrice);
+  }, [cartItems]);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -13,7 +21,7 @@ export const ShoppingCart = () => {
   return (
     <>
       <img src={shoppingBag} className="bag-icon" onClick={toggleSidebar} />
-      <span className="circle">0</span>
+      <span className="circle">{cartItems.length}</span>
       <div className={`overlay ${isOpen ? 'active' : ''}`} onClick={toggleSidebar}></div>
       <div className={`sidebar ${isOpen ? 'open' : ''} sidebar-wide`}>
         <div className="sidebar-heading">
@@ -23,22 +31,16 @@ export const ShoppingCart = () => {
           </button>
         </div>
         <div className="cart-items">
-          <CartItem />
-          <CartItem />
-          <CartItem />
-          <CartItem />
-          <CartItem />
-          <CartItem />
-          <CartItem />
-          <CartItem />
-          <CartItem />
+          {cartItems.map((item) => (
+            <CartItem key={item.id} title={item.title} image={item.image} price={item.price} />
+          ))}
         </div>
         <div className="cart-checkout">
           <hr />
 
           <div className="cart-subtotal">
             <div>Subtotal:</div>
-            <div>0€</div>
+            <div>{totalPrice} €</div>
           </div>
           <button>Checkout</button>
         </div>
@@ -47,17 +49,17 @@ export const ShoppingCart = () => {
   );
 };
 
-const CartItem = () => {
+const CartItem = ({ title, image, price }) => {
   return (
     <div className="cart-item">
-      <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" className="cart-item-image" />
+      <img src={image} className="cart-item-image" />
       <div className="cart-info-container">
         <div className="cart-item-info">
-          Man T-shirt Slim Fit
+          {title}
           <button>DEL</button>
         </div>
         <div className="cart-item-info">
-          <div>22.3€</div>
+          <div>{price} €</div>
           <div>
             <button>-</button> 1 <button>+</button>
           </div>

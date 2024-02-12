@@ -8,7 +8,7 @@ import { ShopContext } from '../../App';
 
 export const ProductPage = () => {
   const { productId } = useParams();
-  const { products } = useContext(ShopContext);
+  const { products, addToCart } = useContext(ShopContext);
   const selectedProduct = products.find((item) => item.id === parseInt(productId));
 
   return (
@@ -35,7 +35,9 @@ export const ProductPage = () => {
           <Link to="/shop" className="link">
             <button className="button button-secondary">Go Back</button>
           </Link>
-          <button className="button button-primary">Add to cart</button>
+          <button className="button button-primary" onClick={() => addToCart(selectedProduct)}>
+            Add to cart
+          </button>
         </div>
       </div>
     </div>

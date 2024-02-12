@@ -11,6 +11,7 @@ import { createContext, useEffect, useState } from 'react';
 export const ShopContext = createContext({
   products: [],
   cartItems: [],
+  addToCart: () => {},
 });
 
 function App() {
@@ -32,12 +33,16 @@ function App() {
     fetchData();
   }, []);
 
+  const addToCart = (selectedProduct) => {
+    setCartItems((prevCartItems) => [...prevCartItems, selectedProduct]);
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
 
   return (
-    <ShopContext.Provider value={{ products, cartItems }}>
+    <ShopContext.Provider value={{ products, cartItems, addToCart }}>
       <Router>
         <Header />
         <Routes>
