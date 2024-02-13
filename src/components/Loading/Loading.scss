@@ -1,0 +1,29 @@
+@import '../../styles';
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  height: 100vh;
+}
+.loading-circle {
+  border-radius: 50%;
+  border: 8px solid lightgray;
+  border-top: 8px solid $primary-color;
+  border-bottom: 8px solid gray;
+  width: 75px;
+  height: 75px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -7,6 +7,7 @@ import './styles.scss';
 import { Footer } from './components/Footer/Footer';
 import { ProductPage } from './pages/ProductPage/ProductPage';
 import { createContext, useEffect, useState } from 'react';
+import { Loading } from './components/Loading/Loading';
 
 export const ShopContext = createContext({
   products: [],
@@ -38,7 +39,7 @@ function App() {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (
