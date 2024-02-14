@@ -1,5 +1,12 @@
 @import '../../variables';
 
+.shopping-cart-icon {
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 .cart-items {
   display: flex;
   flex-direction: column;

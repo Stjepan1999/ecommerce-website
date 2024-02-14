@@ -22,8 +22,11 @@ export const ShoppingCart = () => {
 
   return (
     <>
-      <img src={shoppingBag} className="bag-icon" onClick={toggleSidebar} />
-      <span className="circle">{cartItems.length}</span>
+      <div className="shopping-cart-icon">
+        <img src={shoppingBag} className="bag-icon" onClick={toggleSidebar} />
+        <span className="circle">{cartItems.length}</span>
+      </div>
+
       <div className={`overlay ${isOpen ? 'active' : ''}`} onClick={toggleSidebar}></div>
       <div className={`sidebar ${isOpen ? 'open' : ''} sidebar-wide`}>
         <div className="sidebar-heading">
