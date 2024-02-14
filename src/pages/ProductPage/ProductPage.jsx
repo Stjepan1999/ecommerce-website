@@ -1,6 +1,4 @@
 import './ProductPage.scss';
-import '../../styles.scss';
-import '../../components/Product/Product.scss';
 import starIcon from '../../assets/icons/star.png';
 import { Link, useParams } from 'react-router-dom';
 import { useContext } from 'react';

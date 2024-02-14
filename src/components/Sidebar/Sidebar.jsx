@@ -34,7 +34,7 @@ export const Sidebar = () => {
       <div className={`overlay ${isOpen ? 'active' : ''}`} onClick={toggleSidebar}></div>
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <button className="button-no-style" onClick={toggleSidebar}>
-          X
+          ✕
         </button>
         <div className="sidebar-pages">
           <NavLink to="/" className="nav-link">

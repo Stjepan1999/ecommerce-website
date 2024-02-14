@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-$background-color: #f5f5f5;
-$primary-color: #3498db;
-$secondary-color: #1c6da8;
-$text-color: #555555;
-$text-color-secondary: #000000;
+@import 'variables';
 
 * {
   margin: 0;
@@ -15,7 +11,7 @@ $text-color-secondary: #000000;
 
 body {
   background-color: $background-color;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-stack-primary;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,6 +57,7 @@ body {
   border: none;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   &:hover {
     cursor: pointer;
@@ -81,6 +78,33 @@ body {
 .button-icon {
   margin-left: 7px;
   width: 25px;
+}
+
+.button-no-style {
+  background: transparent;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.button-circle {
+  background: $text-color;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
 }
 
 .primary-color-text {
@@ -114,6 +138,10 @@ body {
 
 .medium-icon {
   width: 40px;
+}
+
+.small-icon {
+  width: 20px;
 }
 
 .link {

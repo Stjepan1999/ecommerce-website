@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import './ShoppingCart.scss';
 import '../Sidebar/Sidebar.scss';
 import shoppingBag from '../../assets/icons/shopping-bag.png';
+import trashIcon from '../../assets/icons/trash.png';
+import forwardArrow from '../../assets/images/forward-arrow.png';
 import { ShopContext } from '../../App';
 
 export const ShoppingCart = () => {
@@ -25,24 +27,29 @@ export const ShoppingCart = () => {
       <div className={`overlay ${isOpen ? 'active' : ''}`} onClick={toggleSidebar}></div>
       <div className={`sidebar ${isOpen ? 'open' : ''} sidebar-wide`}>
         <div className="sidebar-heading">
-          <h3>Shopping cart</h3>
-          <button className="button-no-style" onClick={toggleSidebar}>
-            X
+          <h3 className="secondary-color-text">Shopping cart</h3>
+          <button className="button-no-style secondary-color-text" onClick={toggleSidebar}>
+            ✕
           </button>
         </div>
         <div className="cart-items">
-          {cartItems.map((item) => (
-            <CartItem key={item.id} title={item.title} image={item.image} price={item.price} />
-          ))}
+          {cartItems.length > 0 ? (
+            cartItems.map((item) => <CartItem key={item.id} title={item.title} image={item.image} price={item.price} />)
+          ) : (
+            <p>No items have been added to your bag</p>
+          )}
         </div>
-        <div className="cart-checkout">
-          <hr />
+        <hr />
 
-          <div className="cart-subtotal">
+        <div className="cart-checkout">
+          <div className="cart-subtotal secondary-color-text">
             <div>Subtotal:</div>
             <div>{totalPrice} €</div>
           </div>
-          <button>Checkout</button>
+          <button className="button button-primary">
+            Checkout
+            <img src={forwardArrow} alt="Forward arrow" className="button-icon" />
+          </button>
         </div>
       </div>
     </>
@@ -56,12 +63,18 @@ const CartItem = ({ title, image, price }) => {
       <div className="cart-info-container">
         <div className="cart-item-info">
           {title}
-          <button>DEL</button>
+          <button className="button-no-style">
+            <img src={trashIcon} className="small-icon" />
+          </button>
         </div>
         <div className="cart-item-info">
-          <div>{price} €</div>
           <div>
-            <button>-</button> 1 <button>+</button>
+            <span className="secondary-color-text">{price} €</span>
+          </div>
+          <div className="cart-item-buttons">
+            <button className="button-circle">−</button>
+            <div>1</div>
+            <button className="button-circle">+</button>
           </div>
         </div>
       </div>
