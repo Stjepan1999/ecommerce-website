@@ -13,7 +13,7 @@ export const ShoppingCart = () => {
 
   useEffect(() => {
     const totalPrice = cartItems.reduce((acc, curr) => acc + curr.price, 0);
-    setTotalPrice(totalPrice);
+    setTotalPrice(totalPrice.toFixed(2));
   }, [cartItems]);
 
   const toggleSidebar = () => {
