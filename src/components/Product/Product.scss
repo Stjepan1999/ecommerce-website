@@ -17,9 +17,15 @@
   }
 }
 
+.product-image-container {
+  width: 320px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
 .product-image {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
 }
 
 .product-rating {

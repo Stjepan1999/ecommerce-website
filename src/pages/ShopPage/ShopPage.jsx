@@ -20,6 +20,7 @@ export const ShopPage = () => {
               price={product.price}
               rating={product.rating.rate}
               image={product.image}
+              className="grid-item"
             />
           </Link>
         ))}
