@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import '../../pages/HomePage/HomePage.scss';
 import forwardArrow from '../../assets/images/forward-arrow.png';
-import landingImageSmall from '../../assets/images/landing-image-small.jpg';
-import landingImageMedium from '../../assets/images/landing-image-medium.jpg';
+import landingImageSmall from '../../assets/images/landing-image-small.png';
 import landingImage from '../../assets/images/landing-image.png';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +11,8 @@ export const LandingSection = () => {
       <div className="landing-text">
         <p className="landing-">Welcome to SmartCart</p>
         <h1 className="landing-heading">
-          Discover the Art of <br />
+          Discover the
+          <br />
           <span className="primary-color-text">Smart</span> Shopping
         </h1>
         <p className="text-description text-margin">
@@ -34,12 +34,11 @@ export const LandingSection = () => {
         </div>
       </div>
       <div className="landing-image-container">
-        <img
-          srcSet={`${landingImageSmall} 320w, ${landingImageMedium} 480w, ${landingImage} 800w`}
-          sizes="(max-width: 480px) 320px, (max-width: 800px) 480w, 640w"
-          src={landingImage}
-          className="landing-image"
-        />
+        <picture>
+          <source media="(max-width: 799px)" srcSet={landingImageSmall} />
+          <source media="(min-width: 800px)" srcSet={landingImage} />
+          <img src={landingImage} alt="Landing image with " className="landing-image" />
+        </picture>
       </div>
     </div>
   );

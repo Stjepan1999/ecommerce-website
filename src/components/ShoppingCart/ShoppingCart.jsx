@@ -12,7 +12,7 @@ export const ShoppingCart = () => {
   const [totalPrice, setTotalPrice] = useState(null);
 
   useEffect(() => {
-    const totalPrice = cartItems.reduce((acc, curr) => acc + curr.price, 0);
+    const totalPrice = cartItems.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
     setTotalPrice(totalPrice.toFixed(2));
   }, [cartItems]);
 
