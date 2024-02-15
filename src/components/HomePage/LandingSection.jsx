@@ -3,7 +3,7 @@ import '../../pages/HomePage/HomePage.scss';
 import forwardArrow from '../../assets/images/forward-arrow.png';
 import landingImageSmall from '../../assets/images/landing-image-small.jpg';
 import landingImageMedium from '../../assets/images/landing-image-medium.jpg';
-import landingImageLarge from '../../assets/images/landing-image-large.jpg';
+import landingImage from '../../assets/images/landing-image.png';
 import { Link } from 'react-router-dom';
 
 export const LandingSection = () => {
@@ -33,12 +33,14 @@ export const LandingSection = () => {
           <StatElement statNumber="250k+" statText="Customers" />
         </div>
       </div>
-      <img
-        srcSet={`${landingImageSmall} 320w, ${landingImageMedium} 480w, ${landingImageLarge} 640w`}
-        sizes="(max-width: 480px) 320px, (max-width: 800px) 480w, 640w"
-        src={landingImageLarge}
-        className="landing-image"
-      />
+      <div className="landing-image-container">
+        <img
+          srcSet={`${landingImageSmall} 320w, ${landingImageMedium} 480w, ${landingImage} 800w`}
+          sizes="(max-width: 480px) 320px, (max-width: 800px) 480w, 640w"
+          src={landingImage}
+          className="landing-image"
+        />
+      </div>
     </div>
   );
 };

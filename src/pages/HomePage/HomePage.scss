@@ -3,6 +3,7 @@
 .landing-section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: $text-color;
 }
 .landing-heading {
@@ -14,8 +15,8 @@
   margin-bottom: 4rem;
 }
 .landing-image {
-  width: 200px;
-  height: auto;
+  width: 800px;
+  height: 550px;
   border-radius: 20px;
 }
 .landing-description {
@@ -87,6 +88,7 @@
 @media (max-width: 1360px) {
   .landing-section {
     flex-direction: column;
+    align-items: start;
   }
 
   @media (max-width: 1000px) {

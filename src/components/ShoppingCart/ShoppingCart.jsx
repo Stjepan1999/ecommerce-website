@@ -37,7 +37,7 @@ export const ShoppingCart = () => {
         </div>
         <div className="cart-items">
           {cartItems.length > 0 ? (
-            cartItems.map((item) => <CartItem key={item.id} title={item.title} image={item.image} price={item.price} />)
+            cartItems.map((item) => <CartItem key={item.id} product={item} />)
           ) : (
             <p>No items have been added to your bag</p>
           )}
@@ -59,25 +59,31 @@ export const ShoppingCart = () => {
   );
 };
 
-const CartItem = ({ title, image, price }) => {
+const CartItem = ({ product }) => {
+  const { increaseQuantity, decreaseQuantity, deleteProduct } = useContext(ShopContext);
+
   return (
     <div className="cart-item">
-      <img src={image} className="cart-item-image" />
+      <img src={product.image} className="cart-item-image" />
       <div className="cart-info-container">
         <div className="cart-item-info">
-          {title}
-          <button className="button-no-style">
+          {product.title}
+          <button className="button-no-style" onClick={() => deleteProduct(product)}>
             <img src={trashIcon} className="small-icon" />
           </button>
         </div>
         <div className="cart-item-info">
           <div>
-            <span className="secondary-color-text">{price} €</span>
+            <span className="secondary-color-text">{product.price} €</span>
           </div>
           <div className="cart-item-buttons">
-            <button className="button-circle">−</button>
-            <div>1</div>
-            <button className="button-circle">+</button>
+            <button className="button-circle" onClick={() => decreaseQuantity(product)}>
+              −
+            </button>
+            <div>{product.quantity}</div>
+            <button className="button-circle" onClick={() => increaseQuantity(product)}>
+              +
+            </button>
           </div>
         </div>
       </div>

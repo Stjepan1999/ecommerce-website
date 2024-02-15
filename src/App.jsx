@@ -13,9 +13,12 @@ export const ShopContext = createContext({
   products: [],
   cartItems: [],
   addToCart: () => {},
+  increaseQuantity: () => {},
+  decreaseQuantity: () => {},
+  deleteProduct: () => {},
 });
 
-function App() {
+export const App = () => {
   const [products, setProducts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
 
@@ -34,8 +37,38 @@ function App() {
     fetchData();
   }, []);
 
-  const addToCart = (selectedProduct) => {
-    setCartItems((prevCartItems) => [...prevCartItems, selectedProduct]);
+  const addToCart = (product) => {
+    const cartItemsClone = structuredClone(cartItems);
+    const productIndex = cartItems.findIndex((item) => item.id === product.id);
+    if (productIndex !== -1) {
+      cartItemsClone[productIndex].quantity += 1;
+      setCartItems(cartItemsClone);
+    } else {
+      product.quantity = 1;
+      setCartItems((prevCartItems) => [...prevCartItems, product]);
+    }
+  };
+
+  const decreaseQuantity = (product) => {
+    const cartItemsClone = structuredClone(cartItems);
+    const productIndex = cartItems.findIndex((item) => item.id === product.id);
+    if (product.quantity <= 1) {
+      deleteProduct(product);
+    } else {
+      cartItemsClone[productIndex].quantity -= 1;
+      setCartItems(cartItemsClone);
+    }
+  };
+
+  const increaseQuantity = (product) => {
+    const cartItemsClone = structuredClone(cartItems);
+    const productIndex = cartItems.findIndex((item) => item.id === product.id);
+    cartItemsClone[productIndex].quantity += 1;
+    setCartItems(cartItemsClone);
+  };
+
+  const deleteProduct = (product) => {
+    setCartItems((prevCartItems) => prevCartItems.filter((item) => item.id !== product.id));
   };
 
   if (loading) {
@@ -43,7 +76,7 @@ function App() {
   }
 
   return (
-    <ShopContext.Provider value={{ products, cartItems, addToCart }}>
+    <ShopContext.Provider value={{ products, cartItems, addToCart, increaseQuantity, decreaseQuantity, deleteProduct }}>
       <Router>
         <Header />
         <Routes>
@@ -56,6 +89,4 @@ function App() {
       </Router>
     </ShopContext.Provider>
   );
-}
-
-export default App;
+};

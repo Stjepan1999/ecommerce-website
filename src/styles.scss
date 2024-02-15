@@ -137,6 +137,11 @@ body {
 
 .logo-secondary {
   color: $background-color;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1);
+  }
 }
 
 .medium-icon {
