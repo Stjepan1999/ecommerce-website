@@ -3,7 +3,6 @@
 .footer {
   background-color: $secondary-color;
   color: $background-color;
-  padding: 4rem;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -11,6 +10,7 @@
 .footer-container {
   display: flex;
   width: 1600px;
+  padding: 4rem;
 }
 .footer-inner {
   display: flex;

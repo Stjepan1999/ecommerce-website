@@ -1,11 +1,16 @@
 import './Footer.scss';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logoSecondary from '../../assets/icons/logo-secondary.png';
 import instagramLogo from '../../assets/icons/instagram.png';
 import facebookLogo from '../../assets/icons/facebook.png';
 import xLogo from '../../assets/icons/x.png';
+import { useContext } from 'react';
+import { ShopContext } from '../../App';
 
 export const Footer = () => {
+  const { products } = useContext(ShopContext);
+  const popularProducts = products.sort((a, b) => b.rating.rate - a.rating.rate).slice(0, 6);
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -24,40 +29,27 @@ export const Footer = () => {
         <div className="footer-inner">
           <div className="footer-section">
             <h3 className="footer-heading">Products</h3>
-            <NavLink to="/" className="nav-link">
-              Air Force 1
-            </NavLink>
-            <NavLink to="/" className="nav-link">
-              Air Force 1
-            </NavLink>
-            <NavLink to="/" className="nav-link">
-              Air Force 1
-            </NavLink>
-            <NavLink to="/" className="nav-link">
-              Air Force 1
-            </NavLink>
-            <NavLink to="/" className="nav-link">
-              Air Force 1
-            </NavLink>
-            <NavLink to="/" className="nav-link">
-              Air Force 1
-            </NavLink>
+            {popularProducts.map((item) => (
+              <Link to={`/product/${item.id}`} className="nav-link" key={item.id}>
+                {item.title.slice(0, 20)}
+              </Link>
+            ))}
           </div>
           <div className="footer-section">
             <h3 className="footer-heading">Help</h3>
-            <NavLink to="/" className="nav-link">
+            <NavLink to="/about" className="nav-link">
               About us
             </NavLink>
-            <NavLink to="/" className="nav-link">
+            <NavLink to="/about" className="nav-link">
               FAQs
             </NavLink>
-            <NavLink to="/" className="nav-link">
+            <NavLink to="/about" className="nav-link">
               How it works
             </NavLink>
-            <NavLink to="/" className="nav-link">
+            <NavLink to="/about" className="nav-link">
               Privacy policy
             </NavLink>
-            <NavLink to="/" className="nav-link">
+            <NavLink to="/about" className="nav-link">
               Payment policy
             </NavLink>
           </div>
