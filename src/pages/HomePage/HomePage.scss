@@ -12,7 +12,7 @@
   margin: 2rem 0 1rem 0;
 }
 .landing-text {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .landing-image {
   width: 700px;
@@ -119,5 +119,18 @@
 @media (max-width: 640px) {
   .landing-heading {
     font-size: 52px;
+  }
+}
+
+@media (max-width: 400px) {
+  .landing-stats {
+    margin-top: 2rem;
+  }
+  .stat-number {
+    font-size: 30px;
+    color: $text-color-secondary;
+  }
+  .stat-text {
+    font-size: 18px;
   }
 }

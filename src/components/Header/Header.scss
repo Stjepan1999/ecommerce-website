@@ -3,17 +3,19 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 2rem 4rem;
+  margin: auto;
   max-width: 1600px;
 }
 .nav-bar {
   display: flex;
+  align-items: center;
   gap: 20px;
   color: $text-color;
   text-decoration: none;
   font-size: 20px;
   position: relative;
+  margin-left: auto;
 
   .nav-pages {
     display: flex;
@@ -60,7 +62,7 @@
 }
 @media screen and (max-width: 600px) {
   .header {
-    padding: 1rem 4rem;
+    padding: 1rem 1rem;
   }
   .line-container {
     display: flex;

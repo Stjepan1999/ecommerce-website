@@ -14,13 +14,13 @@ body {
   font-family: $font-stack-primary;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .page {
   display: flex;
   flex-direction: column;
   padding: 6rem 4rem;
+  margin: auto;
   gap: 100px;
   max-width: 1600px;
 }
@@ -44,6 +44,10 @@ body {
   font-size: 20px;
   line-height: 1.5;
   color: $text-color;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-margin {
@@ -164,7 +168,16 @@ body {
 }
 
 @media (max-width: 600px) {
+  .page {
+    padding: 2rem 1rem;
+  }
+  .heading-large {
+    font-size: 52px;
+  }
   .section {
     margin-bottom: 0;
+  }
+  .text-margin {
+    margin-bottom: 2rem;
   }
 }

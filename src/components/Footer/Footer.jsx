@@ -7,9 +7,9 @@ import xLogo from '../../assets/icons/x.png';
 
 export const Footer = () => {
   return (
-    <footer className="footer-container">
-      <div className="footer">
-        <div className="footer-section footer-section-wide">
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-section">
           <NavLink to="/" className="logo logo-secondary">
             <img src={logoSecondary} className="logo-icon" />
             SmartCart
@@ -21,7 +21,7 @@ export const Footer = () => {
             <img src={instagramLogo} className="medium-icon" />
           </div>
         </div>
-        <div className="footer-container">
+        <div className="footer-inner">
           <div className="footer-section">
             <h3 className="footer-heading">Products</h3>
             <NavLink to="/" className="nav-link">

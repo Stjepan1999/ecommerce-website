@@ -28,8 +28,8 @@ export const ProductPage = () => {
         </div>
         <h2>{selectedProduct.price} €</h2>
         <hr />
-        <p className="text-description">{selectedProduct.description}</p>
-        <div className="flex-container">
+        <p className="text-description text-justify">{selectedProduct.description}</p>
+        <div className="buttons-container">
           <Link to="/shop" className="link">
             <button className="button button-secondary">Go Back</button>
           </Link>
