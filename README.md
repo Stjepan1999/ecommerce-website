@@ -1,8 +1,16 @@
-# React + Vite
+# Ecommerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React web application that simulates an ecommerce website. It utilizes the Fake Store API to fetch product data and allows users to browse products, add items to their shopping cart, and view information about the store.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Users can add products to their cart, view their selected items, and adjust quantities as needed.
+- Clicking on a product reveals more information, including descriptions and prices.
+- Responsive design
+
+[View Demo](https://ecomwebsite-stjepan.netlify.app/)
+
+![Ecommerce website](https://i.imgur.com/qJQAAWh.png)
+
+
+
