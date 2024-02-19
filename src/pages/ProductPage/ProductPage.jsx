@@ -11,7 +11,9 @@ export const ProductPage = () => {
 
   return (
     <div className="page product-page">
-      <img src={selectedProduct.image} className="product-page-image" />
+      <div className="product-page-image-container">
+        <img src={selectedProduct.image} className="product-page-image" />
+      </div>
       <div className="product-info">
         <div className="flex-container">
           <p>
